@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload XML e Gerar DANFE</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        Upload XML e Gerar DANFE
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="file">Selecione o Arquivo XML</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="file" name="file" accept=".xml" required>
+                                    <label class="custom-file-label" for="file">Escolher arquivo</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Upload e Gerar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer">
+                    <p>&copy; 2024 AxoTecnologia. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
